@@ -1,39 +1,45 @@
-'use strict';
+(function () {
+    "use strict";
 
-module.exports = function(gulp, src){
+    module.exports = function(gulp, src){
+        var path = require("path");
+        var gUtils = require("pbdesk-gulp-utils")(gulp);
+        var jshint = require("gulp-jshint");
+        var eslint = require("gulp-eslint");
+        var jscs = require("gulp-jscs");
 
-    var jshint = require('gulp-jshint');
-    var eslint = require('gulp-eslint');
-    var jscs = require('gulp-jscs');
+        gulp.task("jsHint", function(){
+            gUtils.log("Running JSHint on following files");
+            return gulp
+                .src(src)
+                .pipe(gUtils.GP.print())
+                .pipe(jshint())
+                .pipe(jshint.reporter("jshint-stylish"));
+        });
 
-    gulp.task('jsHint', function(){
-        console.log('Running JSHint');
-        return gulp
-            .src(src)
-            .pipe(jshint())
-            .pipe(jshint.reporter('jshint-stylish'));
-    });
+        gulp.task("esLint", function(){
+            gUtils.log("Running ESLint on following files");
+            return gulp
+                .src(src)
+                .pipe(gUtils.GP.print())
+                .pipe(eslint({
+                    envs: [
+                        "node"
+                    ]
+                }))
+                .pipe(eslint.format());
+        });
 
-    gulp.task('esLint', function(){
-        console.log("f:" + __filename);
-        console.log("d:" + __dirname);
-        return gulp
-            .src(src)
-            .pipe(eslint({
-                envs: [
-                    'node'
-                ]
-            }))
-            .pipe(eslint.format());
-    });
+        gulp.task("jscs", function() {
+            gUtils.log("Running jscs on following files");
+            return gulp
+                .src(src)
+                .pipe(gUtils.GP.print())
+                //.pipe(gUtils.GP.if(gUtils.args.verbose, gUtils.GP.print()))
+                .pipe(jscs({
+                    configPath: path.join(__dirname, "./../rules/.jscsrc")
+                }));
+        });
+    };
 
-    gulp.task('jscs', function() {
-        console.log(src);
-        return gulp
-            .src(src)
-            //.pipe(gUtil.GP.if(gUtil.args.verbose, gUtil.GP.print()))
-            .pipe(jscs({
-                configPath: __dirname + './../rules/.jscsrc'
-            }));
-    });
-};
+}());

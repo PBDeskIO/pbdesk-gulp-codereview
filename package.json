@@ -22,6 +22,7 @@
     "gulp-jscs": "^1.6.0",
     "gulp-jshint": "^1.10.0",
     "jshint-smart": "^0.1.2",
-    "jshint-stylish": "^1.0.2"
+    "jshint-stylish": "^1.0.2",
+    "pbdesk-gulp-utils": "git://github.com/PBDeskIO/pbdesk-gulp-utils#0.0.1"
   }
 }
