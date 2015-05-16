@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/PBDeskIO/pbdesk-gulp-codereview/issues"
   },
-  "homepage": "https://github.com/PBDeskIO/pbdesk-gulp-codereview#readme"
+  "homepage": "https://github.com/PBDeskIO/pbdesk-gulp-codereview#readme",
+  "dependencies": {
+    "gulp": "^3.8.11",
+    "gulp-jscs": "^1.6.0",
+    "gulp-jshint": "^1.10.0",
+    "jshint-smart": "^0.1.2",
+    "jshint-stylish": "^1.0.2"
+  }
 }
