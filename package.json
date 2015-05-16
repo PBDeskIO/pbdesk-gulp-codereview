@@ -1,0 +1,19 @@
+{
+  "name": "pbdesk-gulp-codereview",
+  "version": "0.0.1",
+  "description": "Javascript Code vetting using JSHint & JSCS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PBDeskIO/pbdesk-gulp-codereview.git"
+  },
+  "author": "Pinal Bhatt <self@pbdesk.io>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PBDeskIO/pbdesk-gulp-codereview/issues"
+  },
+  "homepage": "https://github.com/PBDeskIO/pbdesk-gulp-codereview#readme"
+}
