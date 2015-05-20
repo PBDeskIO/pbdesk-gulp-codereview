@@ -15,6 +15,9 @@
   "bugs": {
     "url": "https://github.com/PBDeskIO/pbdesk-gulp-codereview/issues"
   },
+  "publishConfig": {
+    "registry": "http://npm.tools.weightwatchers.com/"
+  },
   "homepage": "https://github.com/PBDeskIO/pbdesk-gulp-codereview#readme",
   "dependencies": {
     "gulp": "^3.8.11",
