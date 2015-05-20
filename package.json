@@ -1,6 +1,6 @@
 {
   "name": "pbdesk-gulp-codereview",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Javascript Code vetting using JSHint & JSCS",
   "main": "index.js",
   "scripts": {
@@ -14,6 +14,9 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/PBDeskIO/pbdesk-gulp-codereview/issues"
+  },
+  "publishConfig": {
+    "registry": "http://npm.tools.weightwatchers.com/"
   },
   "homepage": "https://github.com/PBDeskIO/pbdesk-gulp-codereview#readme",
   "dependencies": {
