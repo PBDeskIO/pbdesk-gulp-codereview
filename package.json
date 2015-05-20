@@ -1,6 +1,6 @@
 {
   "name": "pbdesk-gulp-codereview",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Javascript Code vetting using JSHint & JSCS",
   "main": "index.js",
   "scripts": {
